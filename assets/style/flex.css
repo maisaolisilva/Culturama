@@ -1,0 +1,114 @@
+/*Menu de navegação (cabeçalho)*/
+.menu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 33px;
+}
+
+/*Seção categorias*/
+.categorias__lista {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem; /*espaçamento entre linhas (horizontal)*/
+}
+
+.destaques__barra {
+    flex-grow: 1; /*faz a barra(traço) crescer de acordo ao tamanho da tela*/
+}
+
+.destaques {
+    display: flex;
+    align-items: center;
+    gap: 10px; /*como não tem elemento em cima do outro, esse gap funciona como gap-column*/
+}
+
+/*seção eventos*/
+.eventos__lista {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+    justify-content: center;
+}
+.eventos__item {
+    flex-grow: 1;
+    max-width: 400px;
+}
+
+/*seção agenda*/
+.agenda__lista {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    column-gap: 1.5rem;
+    justify-content: center;
+}
+.agenda__item {
+    flex-grow: 1;
+}
+
+/*Rodapé*/
+.rodape {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.rodape .rodape__logo {
+    align-self: end;
+}
+
+@media screen and (min-width: 720px) {
+    /*Menu de navegação (cabeçalho)*/
+    .menu{
+        column-gap: 75px;
+    }
+
+    /*Seção categorias*/
+    .categorias__lista {
+        flex-wrap: wrap; /*quebra em duas colunas*/
+        column-gap: 1.5rem;
+        row-gap: 1rem;
+    }
+
+    /*seção eventos*/
+    .eventos__lista {
+        justify-content: end; /*para o botão "ver mais" ficar para o lado direito */
+    }
+
+    /*seção agenda*/
+    .agenda__lista {
+        justify-content: end;
+    }
+}
+
+    @media screen and (min-width: 1440px) {
+        /*Menu de navegação (cabeçalho)*/
+        .menu {
+            column-gap: 105px;
+            flex-wrap: nowrap;
+        }
+
+        .menu__item:nth-child(1) {
+            order: 1;
+        }
+
+        .menu__item:nth-child(2) {
+            order: 3;
+        }
+
+        .menu__item:nth-child(3) {
+            order: 4;
+        }
+
+        .menu__item:nth-child(4) {
+            order: 5;
+        }
+
+        .menu__item:nth-child(5) {
+            order: 2;
+        }
+    }
+
